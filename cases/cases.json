@@ -1,62 +1,32 @@
 [
   {
     "id": 1,
-    "topic": "El Sistema Solar: planetas, orden y tamaños relativos",
+    "topic": "Entorno inmersivo de vocabulario en inglés: objetos de una casa que se nombran al interactuar (Idiomas)",
     "level": "primaria",
-    "learningGoal": "Reconocer los 8 planetas y su orden desde el Sol, y notar que hay planetas pequeños rocosos y gigantes gaseosos."
+    "learningGoal": "Aprender y repasar el nombre en inglés de objetos cotidianos de una casa (bed, chair, table, lamp, door, window...) haciendo clic en cada objeto para ver y escuchar la palabra."
   },
   {
     "id": 2,
-    "topic": "El ciclo del agua",
-    "level": "primaria",
-    "learningGoal": "Identificar evaporación, condensación, precipitación y colección como un ciclo que se repite."
+    "topic": "Dilatación temporal en relatividad especial: dos relojes a distinta velocidad (Física)",
+    "level": "preparatoria",
+    "learningGoal": "Relacionar la velocidad relativa con el factor de Lorentz y observar que el reloj en movimiento avanza más lento que el reloj en reposo (t = t0 * gamma)."
   },
   {
     "id": 3,
-    "topic": "Estructura del átomo (modelo de Bohr)",
+    "topic": "Galería renacentista interactiva: explorar obras y arquitectura de la época (Historia del Arte)",
     "level": "secundaria",
-    "learningGoal": "Distinguir el núcleo (protones y neutrones) de los niveles de energía con electrones; relacionar número atómico con protones."
+    "learningGoal": "Reconocer rasgos del Renacimiento —perspectiva lineal, proporción y simetría, arcos de medio punto, cúpulas y columnas clásicas— recorriendo una sala con cuadros y elementos arquitectónicos."
   },
   {
     "id": 4,
-    "topic": "Célula animal frente a célula vegetal",
-    "level": "secundaria",
-    "learningGoal": "Comparar organelos y ubicar pared celular, cloroplastos y vacuola central como propios de la célula vegetal."
+    "topic": "Escena 3D de un pasaje literario para club de lectura (Literatura)",
+    "level": "primaria",
+    "learningGoal": "Visualizar el escenario, los personajes y los objetos clave de un pasaje literario para apoyar la comprensión lectora y guiar la conversación del club."
   },
   {
     "id": 5,
-    "topic": "El teorema de Pitágoras visualizado con áreas",
+    "topic": "Estructura de la doble hélice del ADN (Biología)",
     "level": "secundaria",
-    "learningGoal": "Ver que el área del cuadrado sobre la hipotenusa equivale a la suma de las áreas sobre los catetos (a^2 + b^2 = c^2)."
-  },
-  {
-    "id": 6,
-    "topic": "Ondas: amplitud, frecuencia y longitud de onda",
-    "level": "preparatoria",
-    "learningGoal": "Relacionar los parámetros de una onda senoidal (A, f, lambda) con su forma y con v = f * lambda."
-  },
-  {
-    "id": 7,
-    "topic": "Geometría molecular VSEPR (H2O, CO2, CH4, NH3)",
-    "level": "preparatoria",
-    "learningGoal": "Predecir la forma de la molécula y los ángulos de enlace a partir de pares enlazantes y libres."
-  },
-  {
-    "id": 8,
-    "topic": "Leyes de Kepler y órbitas elípticas",
-    "level": "preparatoria",
-    "learningGoal": "Conectar la excentricidad de la elipse, la ley de áreas iguales en tiempos iguales y la relación entre periodo y semieje mayor."
-  },
-  {
-    "id": 9,
-    "topic": "Transformaciones lineales en R^3 (rotación, escala, cizalla)",
-    "level": "universidad",
-    "learningGoal": "Interpretar una matriz 3x3 como una transformación del espacio y observar su efecto sobre los vectores de la base canónica y un cubo unitario."
-  },
-  {
-    "id": 10,
-    "topic": "Estructura de la doble hélice del ADN",
-    "level": "universidad",
-    "learningGoal": "Ubicar el esqueleto azúcar-fosfato, el apareamiento de bases A-T y G-C por puentes de hidrógeno, y el giro helicoidal antiparalelo."
+    "learningGoal": "Ubicar el esqueleto de azúcar-fosfato, el apareamiento de bases A-T y G-C, y el giro helicoidal de las dos cadenas antiparalelas."
   }
 ]
