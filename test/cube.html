@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cubo giratorio — prueba del verificador</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #0b1020; font-family: system-ui, sans-serif; }
+  #info {
+    position: fixed; left: 16px; top: 16px; color: #e8ecff; max-width: 34ch; line-height: 1.45;
+    background: rgba(10, 16, 32, .55); padding: 12px 14px; border-radius: 10px; font-size: 14px;
+    backdrop-filter: blur(3px);
+  }
+  canvas { display: block; }
+</style>
+</head>
+<body>
+<div id="info">
+  <strong>Cubo giratorio</strong><br />
+  Prueba de WebGL headless con SwiftShader.<br />
+  Arrastra para orbitar · rueda para acercar.
+</div>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild(renderer.domElement);
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x0b1020);
+
+const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 100);
+camera.position.set(3, 2.2, 4.5);
+
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+
+scene.add(new THREE.AmbientLight(0xffffff, 0.55));
+const key = new THREE.DirectionalLight(0xffffff, 1.25);
+key.position.set(5, 6, 4);
+scene.add(key);
+
+const cube = new THREE.Mesh(
+  new THREE.BoxGeometry(1.6, 1.6, 1.6),
+  new THREE.MeshStandardMaterial({ color: 0x4f7cff, metalness: 0.25, roughness: 0.35 })
+);
+scene.add(cube);
+
+const grid = new THREE.GridHelper(12, 12, 0x3355aa, 0x223355);
+grid.position.y = -1.4;
+scene.add(grid);
+
+window.addEventListener('resize', () => {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+});
+
+renderer.setAnimationLoop((t) => {
+  cube.rotation.x = t * 0.0006;
+  cube.rotation.y = t * 0.001;
+  controls.update();
+  renderer.render(scene, camera);
+});
+</script>
+</body>
+</html>

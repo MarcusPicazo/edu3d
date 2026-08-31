@@ -1,0 +1,23 @@
+{
+  "name": "edu3d-verify-pipeline",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Pipeline que genera experiencias educativas 3D en Three.js y las verifica visualmente en headless WebGL.",
+  "engines": {
+    "node": ">=20.6"
+  },
+  "scripts": {
+    "verify:cube": "node test/verify-cube.js",
+    "verify:negatives": "node test/verify-negatives.js",
+    "test:verifier": "node test/verify-cube.js && node test/verify-negatives.js",
+    "baseline": "node --env-file-if-exists=.env baseline/index.js",
+    "solution": "node --env-file-if-exists=.env solution/index.js",
+    "eval": "node --env-file-if-exists=.env eval/index.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.122.0",
+    "playwright": "^1.62.1",
+    "pngjs": "^7.0.0"
+  }
+}
